@@ -6,7 +6,12 @@ Hệ **multi-agent** tự động đối soát và duyệt hoá đơn nhà cung 
 - agent gọi tool qua **MCP**;
 - có **harness** gồm guardrail, budget, eval và test.
 
+**Vấn đề.** Kế toán công nợ phải đọc hoá đơn (PDF hoặc ảnh scan), xác minh nhà cung cấp, rồi đối soát 3 bên (hoá đơn ↔ đơn mua hàng ↔ phiếu nhập kho), kiểm tra quy chế và trình duyệt. Tất cả đều làm thủ công.
+
+**Giải pháp.** Mỗi bước do một agent chuyên trách đảm nhận. Các agent là service độc lập, khám phá nhau qua Agent Card và giao việc qua A2A Task. Orchestrator điều phối, chạy song song các bước kiểm tra, và dừng chờ người duyệt (human-in-the-loop) khi khoản chi lớn hoặc có rủi ro.
+
 > 🚧 Đang build theo sprint 14 ngày. Tiến độ xem ở [Milestones](../../milestones) và `docs/learning-log.md`.
+> 📐 Kiến trúc và luồng code chi tiết: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**
 
 ## Kiến trúc mục tiêu
 
