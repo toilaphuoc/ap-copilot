@@ -12,6 +12,7 @@ Hệ **multi-agent** tự động đối soát và duyệt hoá đơn nhà cung 
 
 > 🚧 Đang build theo sprint 14 ngày. Tiến độ xem ở [Milestones](../../milestones) và `docs/learning-log.md`.
 > 📐 Kiến trúc và luồng code chi tiết: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**
+> 📚 Bài học (dạy lại được): **[Bài 1: Bức tranh lớn: multi-agent, A2A, MCP, AP Copilot](docs/lessons/01-buc-tranh-lon.md)**
 
 ## Kiến trúc mục tiêu
 
