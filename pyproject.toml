@@ -1,0 +1,35 @@
+[project]
+name = "ap-copilot"
+version = "0.1.0"
+description = "Multi-agent invoice reconciliation with A2A, LangGraph, MCP"
+requires-python = ">=3.12"
+dependencies = [
+    "a2a-sdk[http-server]>=1.3.0",
+    "httpx>=0.28.1",
+    "langchain-core>=1.8.0",
+    "langgraph>=1.2.20",
+    "pydantic>=2.14.3",
+    "starlette>=1.10.0",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.4.1.post1",
+    "ruff>=0.17.4",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC"]
